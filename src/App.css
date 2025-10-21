@@ -1,0 +1,17 @@
+*{scroll-behavior: smooth;}
+
+body::-webkit-scrollbar {
+    width: 3px;
+    height: 100%;
+    background: rgb(198, 198, 198);
+}
+
+body::-webkit-scrollbar-thumb {
+    width: 3px;
+    border-radius: 5px;
+    background: #3f004c;
+}
+
+#messages_div::-webkit-scrollbar {
+    display: none;
+}
