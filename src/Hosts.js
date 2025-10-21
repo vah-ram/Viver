@@ -1,5 +1,5 @@
 
-export const Host = "http://localhost:5000";
+export const Host = "https://viver-backend.onrender.com";
 
 export const addMessageHost = `${Host}/messages/add-message`;
 export const getMessageHost = `${Host}/messages/get-message`;
