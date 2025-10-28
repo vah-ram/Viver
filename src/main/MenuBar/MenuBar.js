@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function MenuBar() {
   return (
-    <section className="fixed left-0 top-[70px] w-[220px] h-full bg-white text-black z-[100]">
+    <section className="fixed left-0 top-[70px] w-[220px] h-full bg-white text-black z-[100] max-md:hidden">
         <ul className="flex flex-col pt-5 gap-3 font-bold">
           
           <Link to='/'>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 import "./Header-Style.css";
@@ -16,7 +16,7 @@ function Header({ currentUser }) {
 
     const searchUserFunc = async(value) => {
 
-            if(value === '') {
+            if(!value || !currentUser) {
                 setUsers([]);
                 return;
             };
@@ -44,11 +44,11 @@ function Header({ currentUser }) {
                     src="/img/viver-logo.png"
                     className="w-[50px] h-[50px]"/>
                 <h1 
-                    className="font-bold text-[25px] tracking-[5px] ml-[-5px]" 
+                    className="font-bold text-[25px] tracking-[5px] ml-[-5px] max-md:hidden" 
                     style={{color: "#4900a2"}}>IVER</h1>
             </button>
 
-            <div className='w-[40%] h-[200px] mt-[130px] flex flex-col items-center justify-center'>
+            <div className='w-[40%] h-[200px] mt-[130px] flex flex-col items-center justify-center max-md:w-[85%]'>
                 <form 
                     className="w-full translate-y-[15px] flex items-center justify-between rounded-md pl-3 pr-3 pt-2 pb-2" style={{background: "#f5f5f5"}}
                     onSubmit={evt => evt.preventDefault()}>
@@ -95,7 +95,7 @@ function Header({ currentUser }) {
                 </div>
             </div>
 
-            <div className="flex gap-[20px]">
+            <div className="flex gap-[20px]  max-md:hidden">
                 <button className="cursor-pointer">
                     <img src="/img/notification-icon.png" 
                         className="w-[20px] h-[20px]"/>

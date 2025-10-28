@@ -49,7 +49,7 @@ function MyProfile({ currentUser }) {
 
   return (
     <>
-        <Header/>
+        <Header currentUser={currentUser}/>
         <MenuBar/>
         
         <section 

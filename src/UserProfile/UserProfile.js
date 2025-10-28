@@ -62,7 +62,7 @@ function UserProfile({ currentUser }) {
 
   return (
     <>
-        <Header/>
+        <Header currentUser={currentUser}/>
         <MenuBar/>
         
         <section 

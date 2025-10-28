@@ -1,5 +1,6 @@
 import React from 'react'
 import MenuBar from './MenuBar/MenuBar'
+import MobileMenuBar from '../mobileMenuBar/MobileMenuBar'
 
 function Main() {
     
@@ -8,13 +9,12 @@ function Main() {
     <div className='w-full h-full flex flex-col'>
 
     <MenuBar />
+    <MobileMenuBar />
 
     <main 
-        className="translate-y-[70px] ml-[220px] flex gap-[30px] h-auto bg-[#f1f1f1c2] rounded-tl-[30px]"
-         style={{ width: "calc(100%-220px)" }}>
+        className="w-(calc(100%-220px)) translate-y-[70px] ml-[220px] flex gap-[30px] h-auto bg-[#f1f1f1c2] rounded-tl-[30px] max-md:ml-0 max-md:rounded-tl-[0]">
 
-        <section className="mt-5 ml-5 h-full"
-                 style={{ width: "calc(100% - 300px)"}}>
+        <section className="w-(calc(100%-300px)) mt-5 ml-5 h-full max-md:w-full max-md:mr-5">
             <div className="p-5 flex gap-5 items-center
               rounded-[30px] w-full h-[150px] bg-white" name="stories div">
 
@@ -202,7 +202,7 @@ function Main() {
             </div>
         </section>
 
-        <section className="mt-5 mr-3 w-[300px] h-full flex flex-col gap-4">
+        <section className="mt-5 mr-3 w-[300px] h-full flex flex-col gap-4 max-md:hidden">
             <div className="w-full h-auto p-3 bg-white rounded-md">
                 <h2 className="font-bold text-green-600">Друзья онлайн</h2>
 
